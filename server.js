@@ -1,8 +1,11 @@
 const express = require('express');
 const connectDB = require("./helpers/init_mongodb");
-const cors = require("cors");
+// const cors = require("cors");
+require("dotenv").config();
 const app = express();
-const port = 3000;
+
+
+connectDB();
 
 
 
@@ -11,11 +14,8 @@ const port = 3000;
 
 
 
+const PORT = process.env.PORT || 4000;
 
-
-
-
-
-app.listen(port, () =>{
-    console.log(`Server is running at http://localhost:${port}`);
-})
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
