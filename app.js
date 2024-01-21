@@ -3,6 +3,8 @@ const connectDB = require("./helpers/init_mongodb");
 // const cors = require("cors");
 require("dotenv").config();
 const userRoutes = require("./routes/users/user.routes");
+const albumRoutes = require("./routes/albums/album.routes");
+const artistRoutes = require("./routes/artists/artist.routes");
 
 
 const app = express();
@@ -13,6 +15,9 @@ app.use(express.json());
 
 // Routes
 app.use('/api/users', userRoutes);
+app.use('/api/albums', albumRoutes);
+app.use('/api/artists', artistRoutes);
+
 
 
 
