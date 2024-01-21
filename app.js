@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require("./helpers/init_mongodb");
 // const cors = require("cors");
 require("dotenv").config();
-const userRoutes = require("./routes/userRoutes");
+const userRoutes = require("./routes/users/user.routes");
 
 
 const app = express();
