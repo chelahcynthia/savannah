@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs")
-const {getUser} = require("../../models/users/user.model.js")
+const {OAuth2Client} = require("google-auth-library")
 
+const {getUser} = require("../../models/users/user.model.js")
 async function httpGetUser(req, res) {
     
 }
@@ -43,6 +44,6 @@ async function httpGoogleSignIn(req, res){
     const {credential, clientId} = req.body
 }
 
-async function decodeGoogleToke(){
-    const client = new 
+async function decodeGoogleToke(clientId,credential){
+    const client = new client(clientId)
 }
